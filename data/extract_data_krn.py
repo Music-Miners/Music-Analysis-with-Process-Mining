@@ -4,6 +4,7 @@ import verovio
 import os
 import pickle
 import time
+import numpy as np
 
 logs_path = None
 data = []
@@ -23,10 +24,15 @@ def convert_mei_to_music_objects(mei) -> music21.stream.Score:
     try:
         conv = music21.mei.MeiToM21Converter(mei)
         piece = conv.run()
+        piece = transpose_to_C(piece)
     except:
         write_log("\tCannot convert the mei data to the music objects representation.\n")
     return piece
 
+def transpose_to_C(piece):
+    key = piece.analyze('key')
+    i = music21.interval.Interval(key.tonic, music21.pitch.Pitch('C'))
+    return piece.transpose(i)
 
 def get_3d_representation_of_the_piece(piece):
     entity = None
@@ -63,8 +69,8 @@ def write_log(msg):
 def main():
     global logs_path
     epoch = int(time.time())
-    logs_path = os.path.join(os.getcwd(),"logs_{}.txt".format(epoch))
-    data_path = os.path.join(os.getcwd(),"data_{}.pkl".format(epoch))
+    logs_path = os.path.join(os.getcwd(),"logs_lorraine.txt".format(epoch))
+    data_path = os.path.join(os.getcwd(),"data_lorraine.pkl".format(epoch))
 
     root = None
     root = input("Enter the name of the root directory.\n-->")
