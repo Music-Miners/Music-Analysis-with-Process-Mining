@@ -69,8 +69,8 @@ def write_log(msg):
 def main():
     global logs_path
     epoch = int(time.time())
-    logs_path = os.path.join(os.getcwd(),"logs_lorraine.txt".format(epoch))
-    data_path = os.path.join(os.getcwd(),"data_lorraine.pkl".format(epoch))
+    logs_path = os.path.join(os.getcwd(),"logs_kolberg.txt".format(epoch))
+    data_path = os.path.join(os.getcwd(),"data_kolberg.pkl".format(epoch))
 
     root = None
     root = input("Enter the name of the root directory.\n-->")
