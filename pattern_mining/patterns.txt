@@ -1,0 +1,33 @@
+A2:6 
+C2:20 
+D2:13 
+E2:8 
+G2:5 
+F2:8 
+B-1:6 
+rest:12 
+A2	C2:6 
+A2	E2:5 
+A2	G2:5 
+D2	C2:13 
+C2	E2:8 
+C2	G2:5 
+D2	E2:5 
+G2	E2:5 
+F2	C2:8 
+B-1	C2:6 
+rest	C2:12 
+rest	E2:5 
+rest	D2:8 
+F2	D2:5 
+rest	F2:5 
+A2	C2	E2:5 
+A2	C2	G2:5 
+A2	G2	E2:5 
+D2	C2	E2:5 
+G2	C2	E2:5 
+rest	C2	E2:5 
+D2	rest	C2:8 
+D2	F2	C2:5 
+rest	F2	C2:5 
+A2	C2	E2	G2:5 
