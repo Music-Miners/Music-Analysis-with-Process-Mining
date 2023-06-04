@@ -1,0 +1,12 @@
+====================
+Error: line 7 does not match line 17.
+Line 7: C2 E2 D2
+Line 17: B-1 C2
+====================
+====================
+Error: line 17 does not match line 7.
+Line 17: B-1 C2
+Line 7: C2 E2 D2
+====================
+Not all lines match.
+18 lines match.
